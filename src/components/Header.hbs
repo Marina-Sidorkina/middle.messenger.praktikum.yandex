@@ -1,11 +1,15 @@
 <header>
-  <nav class="navigation">
-    {{#each links}}
-      {{> Link
-          href=href
-          text=text
-          class=class
-      }}
-    {{/each}}
+  <nav>
+    <ul>
+       {{#each links}}
+        <li>
+          {{> Link
+              href=href
+              text=text
+              class=class
+          }}
+        </li>
+      {{/each}}
+    </ul>
   </nav>
 </header>

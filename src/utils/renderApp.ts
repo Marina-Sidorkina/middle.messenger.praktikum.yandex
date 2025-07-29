@@ -11,5 +11,6 @@ export const renderApp = (
   }
 
   const mainHtml = getMainHtml(path as Paths);
+  window.history.pushState({}, "", path);
   element.innerHTML = headerHtml + mainHtml;
 };

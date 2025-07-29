@@ -9,6 +9,5 @@ export const getAuthorizationPage = () => {
   return template({
     styles,
     settings: AUTHORIZAZTION_SETTINGS,
-    showError: true,
   });
 };

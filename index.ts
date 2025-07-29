@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("click", (evt) => {
     const target = evt.target as HTMLElement;
+    evt.preventDefault();
 
     if (target.classList.contains("navLink")) {
       evt.preventDefault();
@@ -22,10 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
       renderApp(appElement, headerHtml, path);
     }
 
-    if (target.id === "registrationLink") {
+    if (target.id === "registrationLink" || target.id === "authorizationLink") {
       evt.preventDefault();
       const path = target.getAttribute("href");
       renderApp(appElement, headerHtml, path);
     }
+  });
+
+  window.addEventListener("popstate", function (event) {
+    const path = window.location.pathname;
+    renderApp(appElement, headerHtml, path);
   });
 });
