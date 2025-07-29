@@ -1,0 +1,37 @@
+.container {
+  @include dialog;
+  height: 394px;
+  margin: 40px;
+}
+
+.title {
+  @include dialog-title;
+}
+
+.form {
+  @include dialog-form;
+}
+
+.label {
+  @include dialog-label;
+}
+
+.input {
+  @include input;
+  height: 50px;
+  border: 1px solid $color-grey;
+}
+
+.button {
+  @include button;
+  margin-bottom: 5px;
+}
+
+.error {
+  @include input-error;
+  display: none;
+}
+
+.link {
+  @include redirectLink;
+}

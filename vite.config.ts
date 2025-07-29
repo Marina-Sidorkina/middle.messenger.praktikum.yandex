@@ -14,5 +14,22 @@ export default defineConfig({
   },
   css: {
     postcss: "./postcss.config.tsx",
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "${resolve(
+          __dirname,
+          "src/scss/_variables.scss"
+        )}";`,
+      },
+    },
   },
+  assetsInclude: [
+    "**/*.svg",
+    "**/*.jpeg",
+    "**/*.jpg",
+    "**/*.png",
+    "**/*.gif",
+    "**/*.webp",
+    "**/*.hbs",
+  ],
 });

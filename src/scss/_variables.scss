@@ -1,0 +1,126 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey: #c1c1c1;
+$color-red: #fc2c38;
+$color-primary: #6c739c;
+$color-primary-light: #989db9;
+$color-primary-dark: #40455d;
+$color-secondary: #faf3f2;
+$color-interactive: #c56b62;
+$color-interactive-hover: #dca6a0;
+$color-interactive-active: #894a44;
+
+@mixin text-xs {
+  font-size: 8px;
+  line-height: 10px;
+}
+
+@mixin text-sm {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin text-md {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin text-lg {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+@mixin background-primary {
+  background-color: $color-primary;
+  opacity: 0.8;
+}
+
+@mixin interactive-element {
+  color: $color-interactive;
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: $color-interactive-hover;
+  }
+
+  &:active {
+    color: $color-interactive-active;
+  }
+}
+
+@mixin dialog {
+  width: 340px;
+  padding: 40px 24px;
+  background-color: $color-white;
+  border-radius: 10px;
+}
+
+@mixin dialog-label {
+  @include text-sm;
+  position: relative;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+@mixin dialog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin dialog-title {
+  @include text-lg;
+  color: $color-black;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+@mixin input {
+  @include text-md;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+
+  &::placeholder {
+    color: $color-grey;
+  }
+}
+
+@mixin input-error {
+  @include text-sm;
+  position: absolute;
+  top: 66px;
+  right: 0;
+  color: $color-red;
+  font-weight: 400;
+}
+
+@mixin button {
+  @include text-md;
+  height: 50px;
+  background-color: $color-interactive;
+  border: none;
+  border-radius: 8px;
+  color: $color-white;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+
+  &:hover {
+    background-color: $color-interactive-hover;
+  }
+
+  &:active {
+    background-color: $color-interactive-active;
+  }
+}
+
+@mixin redirectLink {
+  @include text-sm;
+  display: block;
+  color: $color-primary;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 5px;
+}

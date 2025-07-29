@@ -9,6 +9,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["*.ts", "*.tsx"],
+  "include": ["*.ts", "types.d.ts", "src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
