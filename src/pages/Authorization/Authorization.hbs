@@ -1,24 +1,13 @@
 <main>
-  <div class="{{styles.container}}">
-    <h1 class="{{styles.title}}">Авторизация</h1>
-    <form class="{{styles.form}}" id="authorizationForm">
-      {{#each settings}}
-        {{> Input
-          id=id
-          name=name
-          label=label
-          labelClass=(lookup ../styles 'label')
-          placeholder=placeholder
-          type=type
-          required=required
-          inputClass=(lookup ../styles 'input')
-          error=error
-          errorClass=(lookup ../styles 'error')
-        }}
-      {{/each}}
-
-      {{> Button id="authorizationButton" text="Войти" type="submit" class=styles.button }}
-    </form>
-    <a id="registrationLink" href="/registration" class="{{styles.link}}">Нет аккаунта?</a>
-  </div>
+  {{> Dialog
+    styles=styles
+    title="Авторизация"
+    formId="authorizationForm"
+    settings=settings
+    buttonId="authorizationButton"
+    buttonText="Войти"
+    linkId="registrationLink"
+    linkHref="/registration"
+    linkText="Нет аккаунта?"
+  }}
 </main>

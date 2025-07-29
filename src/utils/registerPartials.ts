@@ -6,4 +6,5 @@ export const registerPartials = () => {
   Handlebars.registerPartial("Link", Components.Link);
   Handlebars.registerPartial("Input", Components.Input);
   Handlebars.registerPartial("Button", Components.Button);
+  Handlebars.registerPartial("Dialog", Components.Dialog);
 };
