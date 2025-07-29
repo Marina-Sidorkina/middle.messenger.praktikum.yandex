@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerTemplate = Handlebars.compile(Components.Header);
   const headerHtml = headerTemplate({ links: NAVIGATION_LINKS });
 
-  renderApp(appElement, headerHtml, DEFAULT_PATH);
+  renderApp(appElement, headerHtml, DEFAULT_PATH, null);
   addListeners(appElement, headerHtml);
 });

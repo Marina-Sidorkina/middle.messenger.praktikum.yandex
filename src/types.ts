@@ -6,3 +6,5 @@ export type Paths =
   | "/chat"
   | "/404"
   | "/500";
+
+export type Modals = "password" | null;

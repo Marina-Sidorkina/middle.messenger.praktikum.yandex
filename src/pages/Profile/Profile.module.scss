@@ -1,3 +1,5 @@
+@use "../../scss/dialog.scss";
+
 .main {
   flex-direction: column;
   justify-content: flex-start;
@@ -62,13 +64,13 @@
 .input {
   @include input;
   @include text-md;
+  flex-shrink: 0;
+  flex-grow: 2;
   width: unset;
   height: 40px;
   margin-bottom: 0;
   background-color: $color-secondary;
   color: $color-primary;
-  flex-shrink: 0;
-  flex-grow: 2;
 
   &:disabled {
     background-color: $color-input-disabled;
@@ -89,10 +91,10 @@
 }
 
 .passwordButton {
-  background-color: transparent;
-  border: none;
   padding: 0;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
   color: $color-secondary;
   transition: color 0.3s linear;
 
@@ -118,4 +120,28 @@
   fill: $color-secondary;
   pointer-events: none;
   transition: fill 0.3s linear;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(51 51 51 / 50%);
+  overflow: auto;
+  z-index: 10;
+  padding: 0 20px;
+  padding-top: calc(100vh / 2 - 306px);
+}
+
+.dialogLink {
+  display: none;
+}
+
+.dialogContainer {
+  margin: 80px 40px 40px 40px;
 }

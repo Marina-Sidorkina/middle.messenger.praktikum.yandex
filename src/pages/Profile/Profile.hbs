@@ -22,8 +22,8 @@
     {{/each}}
     <div class="{{styles.controls}}">
       {{#if isPreview}}
-        {{> Button id=passwordButtonId text="Сменить пароль" type=passwordButtonType class=styles.passwordButton }}
-        <a id="profileEditorLink" href="/profile-editor" class="{{styles.mainButton}}">Редактировать</a>
+        {{> Button id="profileOpenPasswordModal" text="Сменить пароль" type=passwordButtonType class=styles.passwordButton }}
+        {{> Link href="/profile-editor" id="profileEditorLink" class=styles.mainButton text="Редактировать" }}
       {{else}}
         {{> Button id="profileEitorSave" text="Сохранить" type="submit" class=styles.mainButton }}
       {{/if}}
@@ -36,4 +36,16 @@
       </a>
     </div>
   </form>
+  {{#if showPasswordModal}}
+    <div class="{{styles.modal}}">
+       {{> Dialog
+        styles=styles
+        dialogTitle="Сменить пароль"
+        dialogFormId="passwordChangeForm"
+        dialogSettings=modalSettings
+        dialogButtonId="passwordChangeButton"
+        dialogButtonText="Сохранить"
+      }}
+    </div>
+  {{/if}}
 </main>

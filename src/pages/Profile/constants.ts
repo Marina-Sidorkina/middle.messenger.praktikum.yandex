@@ -60,3 +60,36 @@ export const PROFILE_SETTINGS = [
     error: "",
   },
 ];
+
+export const MODAL_SETTINGS = [
+  {
+    id: "profileOldPassword",
+    name: "old_password",
+    label: "Старый пароль",
+    placeholder: "Введите пароль",
+    type: "text",
+    required: true,
+    disabled: false,
+    error: "Заполните поле",
+  },
+  {
+    id: "profileNewPassword",
+    name: "new_password",
+    label: "Новый пароль",
+    placeholder: "Введите новый пароль",
+    type: "password",
+    required: true,
+    disabled: false,
+    error: "Заполните поле",
+  },
+  {
+    id: "profileNewPasswordRepeat",
+    name: "new_password_repeat",
+    label: "Повторить пароль",
+    placeholder: "Повторите пароль",
+    type: "password",
+    required: true,
+    disabled: false,
+    error: "Пароли не совпадают",
+  },
+];

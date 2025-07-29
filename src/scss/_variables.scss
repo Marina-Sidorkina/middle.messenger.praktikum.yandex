@@ -31,6 +31,16 @@ $color-input-disabled: #e4e4e4;
   line-height: 22px;
 }
 
+@mixin text-extra-xs {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+@mixin text-extra-sm {
+  font-size: 34px;
+  line-height: 38px;
+}
+
 @mixin background-primary {
   background-color: $color-primary;
   opacity: 0.8;
@@ -123,7 +133,7 @@ $color-input-disabled: #e4e4e4;
   }
 }
 
-@mixin redirectLink {
+@mixin redirect-link {
   @include text-sm;
   display: block;
   color: $color-primary;

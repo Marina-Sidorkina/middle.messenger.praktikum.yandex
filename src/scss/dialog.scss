@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+.dialogContainer {
+  @include dialog;
+  margin: 40px;
+}
+
+.dialogTitle {
+  @include dialog-title;
+}
+
+.dialogForm {
+  @include dialog-form;
+}
+
+.dialogLabel {
+  @include dialog-label;
+}
+
+.dialogInput {
+  @include input;
+  height: 50px;
+  border: 1px solid $color-grey;
+}
+
+.dialogButton {
+  @include button;
+  margin-bottom: 5px;
+}
+
+.dialogError {
+  @include input-error;
+  display: none;
+}
+
+.dialogLink {
+  @include redirect-link;
+}

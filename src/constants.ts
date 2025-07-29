@@ -1,3 +1,5 @@
+import { Modals } from "./types";
+
 export const NAVIGATION_LINKS = [
   {
     text: "Авторизация",
@@ -51,4 +53,9 @@ export const ROUTE_LINKS = [
   "navChatLink",
   "nav404Link",
   "nav500Link",
+  "errorLink",
 ];
+
+export const MODALS: { [key: string]: Modals } = {
+  profileOpenPasswordModal: "password",
+};
