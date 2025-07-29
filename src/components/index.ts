@@ -3,3 +3,7 @@ export { default as Link } from "./Link.hbs?raw";
 export { default as Input } from "./Input.hbs?raw";
 export { default as Button } from "./Button.hbs?raw";
 export { default as Dialog } from "./Dialog.hbs?raw";
+export { default as PhotoImage } from "./PhotoImage.hbs?raw";
+export { default as DownloadImage } from "./DownloadImage.hbs?raw";
+export { default as ExitImage } from "./ExitImage.hbs?raw";
+export { default as CloseFilledImage } from "./CloseFilledImage.hbs?raw";

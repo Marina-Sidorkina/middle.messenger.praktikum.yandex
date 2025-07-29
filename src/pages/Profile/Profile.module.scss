@@ -1,0 +1,121 @@
+.main {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: $color-secondary;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+
+  .photoImage {
+    fill: $color-grey;
+  }
+
+  .downloadImage {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-grey;
+    cursor: pointer;
+
+    .photoImage {
+      display: none;
+    }
+
+    .downloadImage {
+      display: block;
+      fill: $color-interactive;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 850px;
+  margin-top: 60px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.label {
+  @include text-lg;
+  flex-shrink: 0;
+  width: 150px;
+  font-weight: 500;
+  color: $color-white;
+}
+
+.input {
+  @include input;
+  @include text-md;
+  width: unset;
+  height: 40px;
+  margin-bottom: 0;
+  background-color: $color-secondary;
+  color: $color-primary;
+  flex-shrink: 0;
+  flex-grow: 2;
+
+  &:disabled {
+    background-color: $color-input-disabled;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  margin-top: 60px;
+}
+
+.mainButton {
+  @include button;
+  margin: 0 10px 0 30px;
+}
+
+.passwordButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: $color-secondary;
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: $color-interactive-hover;
+  }
+}
+
+.routeLink {
+  width: 50px;
+  height: 50px;
+
+  &:hover {
+    .exitImage,
+    .closeFilledImage {
+      fill: $color-interactive-hover;
+    }
+  }
+}
+
+.exitImage,
+.closeFilledImage {
+  fill: $color-secondary;
+  pointer-events: none;
+  transition: fill 0.3s linear;
+}

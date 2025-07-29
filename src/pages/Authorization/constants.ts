@@ -6,6 +6,7 @@ export const AUTHORIZAZTION_SETTINGS = [
     placeholder: "Введите логин",
     type: "text",
     required: true,
+    disabled: false,
     error: "Неверный логин",
   },
   {
@@ -15,6 +16,7 @@ export const AUTHORIZAZTION_SETTINGS = [
     placeholder: "Введите пароль",
     type: "password",
     required: true,
+    disabled: false,
     error: "Неверный пароль",
   },
 ];

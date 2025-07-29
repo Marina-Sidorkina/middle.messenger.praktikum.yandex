@@ -1,0 +1,39 @@
+<main class="{{styles.main}}">
+  <div class="{{styles.avatar}}">
+    {{> PhotoImage class=styles.photoImage width=40 height=40 }}
+    {{> DownloadImage class=styles.downloadImage width=40 height=40 }}
+  </div>
+  <form class="{{styles.form}}">
+    {{#each settings}}
+      {{> Input
+        id=id
+        name=name
+        label=label
+        labelClass=(lookup ../styles 'label')
+        placeholder=placeholder
+        type=type
+        required=required
+        inputClass=(lookup ../styles 'input')
+        error=error
+        errorClass=(lookup ../styles 'error')
+        containerClass=(lookup ../styles 'inputContainer')
+        disabled=../isPreview
+      }}
+    {{/each}}
+    <div class="{{styles.controls}}">
+      {{#if isPreview}}
+        {{> Button id=passwordButtonId text="Сменить пароль" type=passwordButtonType class=styles.passwordButton }}
+        <a id="profileEditorLink" href="/profile-editor" class="{{styles.mainButton}}">Редактировать</a>
+      {{else}}
+        {{> Button id="profileEitorSave" text="Сохранить" type="submit" class=styles.mainButton }}
+      {{/if}}
+      <a id="profileExitLink" href="{{ternary isPreview "/chat" "/profile"}}" class="{{styles.routeLink}}">
+        {{#if isPreview}}
+          {{> ExitImage class=styles.exitImage width=50 height=50 }}
+        {{else}}
+          {{> CloseFilledImage class=styles.closeFilledImage width=50 height=50 }}
+        {{/if}}
+      </a>
+    </div>
+  </form>
+</main>

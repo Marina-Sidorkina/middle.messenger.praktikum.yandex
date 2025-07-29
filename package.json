@@ -22,5 +22,10 @@
   },
   "engines": {
     "node": ">=12"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
 }

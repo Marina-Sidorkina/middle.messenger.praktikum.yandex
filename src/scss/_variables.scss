@@ -9,6 +9,7 @@ $color-secondary: #faf3f2;
 $color-interactive: #c56b62;
 $color-interactive-hover: #dca6a0;
 $color-interactive-active: #894a44;
+$color-input-disabled: #e4e4e4;
 
 @mixin text-xs {
   font-size: 8px;
@@ -82,6 +83,7 @@ $color-interactive-active: #894a44;
   padding: 0 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  border: none;
 
   &::placeholder {
     color: $color-grey;
@@ -99,12 +101,17 @@ $color-interactive-active: #894a44;
 
 @mixin button {
   @include text-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 292px;
   height: 50px;
   background-color: $color-interactive;
   border: none;
   border-radius: 8px;
   color: $color-white;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s linear;
 
   &:hover {

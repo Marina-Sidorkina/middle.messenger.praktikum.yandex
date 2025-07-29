@@ -2,38 +2,53 @@ export const NAVIGATION_LINKS = [
   {
     text: "Авторизация",
     href: "/authorization",
-    class: "navLink",
+    id: "navAuthorizationLink",
   },
   {
     text: "Регистрация",
     href: "/registration",
-    class: "navLink",
+    id: "navRegistrationLink",
   },
   {
     text: "Профиль",
     href: "/profile",
-    class: "navLink",
+    id: "navProfileLink",
   },
   {
     text: "Редактор профиля",
     href: "/profile-editor",
-    class: "navLink",
+    id: "navProfileEditorLink",
   },
   {
     text: "Чат",
     href: "/chat",
-    class: "navLink",
+    id: "navChatLink",
   },
   {
     text: "Ошибка 404",
     href: "/404",
-    class: "navLink",
+    id: "nav404Link",
   },
   {
     text: "Ошибка 500",
     href: "/500",
-    class: "navLink",
+    id: "nav500Link",
   },
 ];
 
 export const DEFAULT_PATH = "/authorization";
+
+export const ROUTE_LINKS = [
+  "registrationLink",
+  "authorizationLink",
+  "profileEditorLink",
+  "profileExitLink",
+  "profileEditorExitLink",
+  "navAuthorizationLink",
+  "navRegistrationLink",
+  "navProfileLink",
+  "navProfileEditorLink",
+  "navChatLink",
+  "nav404Link",
+  "nav500Link",
+];
