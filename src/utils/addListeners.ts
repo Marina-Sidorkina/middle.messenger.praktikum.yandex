@@ -1,4 +1,4 @@
-import { MODALS, ROUTE_LINKS } from "../constants";
+import { CLOSE_MODAL_IDS, MODALS, ROUTE_LINKS } from "../constants";
 import { renderApp } from "./renderApp";
 
 export const addListeners = (
@@ -20,6 +20,12 @@ export const addListeners = (
       const modal = MODALS[target.id];
       document.body.classList.add("modal-open");
       renderApp(appElement, headerHtml, window.location.pathname, modal);
+    }
+
+    if (CLOSE_MODAL_IDS.includes(target.id)) {
+      const path = window.location.pathname;
+      document.body.classList.remove("modal-open");
+      renderApp(appElement, headerHtml, path, null);
     }
   });
 

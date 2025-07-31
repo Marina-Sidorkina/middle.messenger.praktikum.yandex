@@ -11,4 +11,5 @@ export const registerPartials = () => {
   Handlebars.registerPartial("DownloadImage", Components.DownloadImage);
   Handlebars.registerPartial("ExitImage", Components.ExitImage);
   Handlebars.registerPartial("CloseFilledImage", Components.CloseFilledImage);
+  Handlebars.registerPartial("CloseImage", Components.CloseImage);
 };

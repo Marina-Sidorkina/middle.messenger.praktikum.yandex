@@ -59,3 +59,5 @@ export const ROUTE_LINKS = [
 export const MODALS: { [key: string]: Modals } = {
   profileOpenPasswordModal: "password",
 };
+
+export const CLOSE_MODAL_IDS = ["profileModalCloseButton"];
