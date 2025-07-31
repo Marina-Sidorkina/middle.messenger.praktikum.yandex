@@ -1,4 +1,5 @@
 import { getAuthorizationPage } from "../pages/Authorization";
+import { getChatPage } from "../pages/Chat";
 import { getErrorPage } from "../pages/Error";
 import { getProfilePage } from "../pages/Profile";
 import { getRegistrationPage } from "../pages/Registration";
@@ -14,6 +15,8 @@ export const getMainHtml = (path: Paths, modal: Modals) => {
       return getProfilePage(path, modal);
     case "/profile-editor":
       return getProfilePage(path, modal);
+    case "/chat":
+      return getChatPage();
     case "/404":
       return getErrorPage(404);
     case "/500":

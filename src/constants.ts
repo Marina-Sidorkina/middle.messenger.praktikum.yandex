@@ -54,6 +54,7 @@ export const ROUTE_LINKS = [
   "nav404Link",
   "nav500Link",
   "errorLink",
+  "chatProfileLink",
 ];
 
 export const MODALS: { [key: string]: Modals } = {

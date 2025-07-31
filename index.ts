@@ -1,7 +1,7 @@
 import * as Components from "./src/components";
 import Handlebars from "handlebars";
-import { registerPartials } from "./src/utils/registerPartials";
 import { DEFAULT_PATH, NAVIGATION_LINKS } from "./src/constants";
+import { registerPartials } from "./src/utils/registerPartials";
 import { renderApp } from "./src/utils/renderApp";
 import { addListeners } from "./src/utils/addListeners";
 import { registerHelpers } from "./src/utils/registerHelpers";

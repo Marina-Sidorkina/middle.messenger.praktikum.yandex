@@ -8,3 +8,4 @@ export { default as DownloadImage } from "./DownloadImage.hbs?raw";
 export { default as ExitImage } from "./ExitImage.hbs?raw";
 export { default as CloseFilledImage } from "./CloseFilledImage.hbs?raw";
 export { default as CloseImage } from "./CloseImage.hbs?raw";
+export { default as ProfileImage } from "./ProfileImage.hbs?raw";
