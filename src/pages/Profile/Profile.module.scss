@@ -17,19 +17,24 @@
   border-radius: 50%;
   transition: all 0.3s linear;
 
-  .avatarPreview {
-    display: none;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
+  .avatarPreview,
   .avatarInput {
     position: absolute;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+  }
+
+  .avatarPreview,
+  .avatarUploadImage {
+    display: none;
+  }
+
+  .avatarPreview {
+    object-fit: cover;
+  }
+
+  .avatarInput {
     opacity: 0;
     cursor: pointer;
   }
@@ -39,7 +44,6 @@
   }
 
   .avatarUploadImage {
-    display: none;
     z-index: 1;
   }
 
