@@ -1,0 +1,5 @@
+<main class="{{styles.main}}">
+  <h1 class="{{styles.title}}">{{errorCode}}</h1>
+  <p class="{{styles.text}}">{{ternary isServerError "Мы уже фиксим..." "Страница не найдена"}}</p>
+  {{> Link href="/chat" id="errorLink" class=styles.link text="Назад к чатам"}}
+</main>

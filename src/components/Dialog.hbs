@@ -1,0 +1,24 @@
+<div class="{{styles.dialogContainer}}">
+  <h1 class="{{styles.dialogTitle}}">{{dialogTitle}}</h1>
+  <form class="{{styles.dialogForm}}" id="{{dialogFormId}}">
+    {{#each dialogSettings}}
+      {{> Input
+        id=id
+        name=name
+        label=label
+        labelClass=(lookup ../styles 'dialogLabel')
+        placeholder=placeholder
+        type=type
+        required=required
+        inputClass=(lookup ../styles 'dialogInput')
+        error=error
+        errorClass=(lookup ../styles 'dialogError')
+      }}
+    {{/each}}
+    {{> Button id=dialogButtonId text=dialogButtonText type="submit" class=styles.dialogButton}}
+  </form>
+  {{> Link href=dialogLinkHref id=dialogLinkId class=styles.dialogLink text=dialogLinkText}}
+  <button id="{{dialogCloseId}}" class="{{styles.dialogCloseButton}}" type="button">
+    {{> CloseImage width=24 height=24 class=styles.dialogCloseImage}}
+  </button>
+</div>

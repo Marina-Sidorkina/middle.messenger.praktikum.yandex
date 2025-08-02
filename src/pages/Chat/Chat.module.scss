@@ -1,0 +1,55 @@
+.main {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 310px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-top: 1px solid $color-primary-light;
+}
+
+.profileLink {
+  @include text-md;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  color: $color-white;
+  text-decoration: none;
+  transition: color 0.3s linear;
+
+  &:hover {
+    circle {
+      fill: $color-interactive-hover;
+    }
+  }
+}
+
+.profileLinkImage {
+  margin-right: 8px;
+
+  circle {
+    fill: $color-white;
+    transition: fill 0.3s linear;
+  }
+
+  path {
+    fill: $color-primary-dark;
+    stroke: $color-primary-dark;
+  }
+  pointer-events: none;
+}
+
+.chat {
+  flex-grow: 2;
+  background-color: $color-secondary;
+}

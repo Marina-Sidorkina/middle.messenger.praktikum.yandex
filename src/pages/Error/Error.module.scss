@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: $color-secondary;
+}
+
+.title,
+.text {
+  @include text-extra-sm;
+  color: $color-primary;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.text {
+  @include text-extra-xs;
+}
+
+.link {
+  @include text-lg;
+  @include interactive-element;
+  text-decoration: none;
+}
