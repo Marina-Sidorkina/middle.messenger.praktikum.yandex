@@ -1,8 +1,10 @@
 <main class="{{styles.main}}">
-  <div class="{{styles.avatar}}">
-    {{> PhotoImage class=styles.photoImage width=40 height=40}}
-    {{> DownloadImage class=styles.downloadImage width=40 height=40}}
-  </div>
+  <label class="{{styles.avatar}}" id="avatarLabel">
+    {{> PhotoImage class=styles.avatarPhotoImage width=40 height=40}}
+    {{> UploadImage class=styles.avatarUploadImage width=40 height=40}}
+    <img class="{{styles.avatarPreview}}" src="" id="avatarPreview"/>
+    <input class="{{styles.avatarInput}}" type="file" accept="image/jpeg, image/jpg, image/png, image/gif, image/webp" name="avatar" id="avatarInput" />
+  </label>
   <form class="{{styles.form}}">
     {{#each settings}}
       {{> Input

@@ -3,7 +3,7 @@ import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-const PORT = 3000;
+const { PORT = 3000 } = process.env;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

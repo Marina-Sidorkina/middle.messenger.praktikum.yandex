@@ -7,6 +7,7 @@
 }
 
 .avatar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,23 +17,41 @@
   border-radius: 50%;
   transition: all 0.3s linear;
 
-  .photoImage {
+  .avatarPreview {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .avatarInput {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .avatarPhotoImage {
     fill: $color-grey;
   }
 
-  .downloadImage {
+  .avatarUploadImage {
     display: none;
+    z-index: 1;
   }
 
   &:hover {
     background-color: $color-grey;
     cursor: pointer;
 
-    .photoImage {
+    .avatarPhotoImage {
       display: none;
     }
 
-    .downloadImage {
+    .avatarUploadImage {
       display: block;
       fill: $color-interactive;
     }
@@ -131,7 +150,7 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: rgb(51 51 51 / 50%);
+  background-color: $color-modal-background;
   overflow: auto;
   z-index: 10;
   padding: 0 20px;

@@ -64,7 +64,7 @@ export const PROFILE_SETTINGS = [
 export const MODAL_SETTINGS = [
   {
     id: "profileOldPassword",
-    name: "old_password",
+    name: "oldPassword",
     label: "Старый пароль",
     placeholder: "Введите пароль",
     type: "text",
@@ -74,7 +74,7 @@ export const MODAL_SETTINGS = [
   },
   {
     id: "profileNewPassword",
-    name: "new_password",
+    name: "newPassword",
     label: "Новый пароль",
     placeholder: "Введите новый пароль",
     type: "password",
